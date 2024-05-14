@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Беседки | Перегородки</title>
+    <link rel="stylesheet" href="../static/style/style.css">
+    <script src="static/script/script.js"></script>
+</head>
+<body>
+    <div class="left-div"></div>
+    <div class="container">
+        <div class="main_menu">
+            <a href="{{ url_for('index') }}">
+                <div class="el_menu">
+                    <div id="img1"><img id= "i1" src="static/img/Home.png"></div>
+                    <div class="menu_p"><span class="animated-text">Главная</span></div>
+                </div>
+            </a>
+
+            <a href="{{ url_for('price') }}">
+                <div class="el_menu">
+                    <img id= "i2" src="static/img/Money.png">
+                    <div class="menu_p"><span class="animated-text">Цены</span></div>
+                </div>
+            </a>
+
+            <a href="{{ url_for('our_work') }}">
+                <div class="el_menu">
+                    <img id= "i3" src="static/img/Work.png">
+                    <div class="menu_p"><span class="animated-text">Наши работы</span></div>
+                </div>
+            </a>
+
+            <a href="{{ url_for('contact') }}">
+                <div class="el_menu">
+                    <img id= "i4" src="static/img/Phone.png">
+                    <div class="menu_p"><span class="animated-text">Контакты</span></div>
+                </div>
+            </a>
+        </div>
+
+        <div id = "shapka">
+            <a href="{{ url_for('index') }}">
+                <img id="avatar" src="static/img/Avatar.png" alt="Логотип">
+            </a>
+            <a href="{{ url_for('index') }}">
+                <div id="text_shapki">ПрофМонтаж</div>
+            </a>
+
+            <a href="{{ url_for('login') }}">
+                <div id="login_on_website">
+                    <img id="log" src="static/img/login.png" alt="Логин">
+                    <div id="text_log">Войти</div>
+                </div>
+            </a>
+        </div>
+
+        <div class="selection_menu">
+
+            <a href="{{ url_for('work_okna') }}">
+                <div class="line_item">Окна</div>
+            </a>
+
+            <a href="{{ url_for('work_dveri') }}">
+                <div class="line_item">Двери</div>
+            </a>
+
+            <a href="{{ url_for('work_balkon') }}">
+                <div class="line_item">Балконы</div>
+            </a>
+
+            <a href="{{ url_for('work_BesedkiPeregorodki') }}">
+                <div class="line_item">Беседки | Перегородки</div>
+            </a>
+
+            <a href="{{ url_for('work_doma') }}">
+                <div class="line_item">Частные дома</div>
+            </a>
+        </div>
+
+        <div class="our_work">
+            <div class="pict_wokr">
+                <img src="static/img/OurWork/BesedkiPeregorodki/Besedka1.png" alt="Пример работы" class="o1">
+            </div>
+            <div class="pict_wokr">
+                <img src="static/img/OurWork/BesedkiPeregorodki/Besedka2.png" alt="Пример работы">
+            </div>
+            <div class="pict_wokr">
+                <img src="static/img/OurWork/BesedkiPeregorodki/Besedka3.png" alt="Пример работы">
+            </div>
+            <div class="pict_wokr">
+                <img src="static/img/OurWork/BesedkiPeregorodki/Besedka4.png" alt="Пример работы">
+            </div>
+            <div class="pict_wokr">
+                <img src="static/img/OurWork/BesedkiPeregorodki/Besedka5.png" alt="Пример работы">
+            </div>
+            <div class="pict_wokr">
+                <img src="static/img/OurWork/BesedkiPeregorodki/Besedka6.png" alt="Пример работы">
+            </div>
+            <div class="pict_wokr">
+                <img src="static/img/OurWork/BesedkiPeregorodki/Besedka7.png" alt="Пример работы">
+            </div>
+            <div class="pict_wokr">
+                <img src="static/img/OurWork/BesedkiPeregorodki/Besedka8.png" alt="Пример работы">
+            </div>
+            <div class="pict_wokr">
+                <img src="static/img/OurWork/BesedkiPeregorodki/Besedka9.png" alt="Пример работы">
+            </div>
+        </div>
+
+                <div class="down">
+            <div class="d2">
+                <div class="png">
+                    <img class="phone" src="static/img/podval/phone.png" alt="Номер телефона">
+                </div>
+                <div class="item2">
+                    <div>8-928-208-0808</div>
+                </div>
+                <div class="png">
+                    <img class="internet" src="static/img/podval/internet.png" alt="">
+                </div>
+                <div class="item2">
+                    <div>Сайт prof-m.ru</div>
+                </div>
+                <div>
+                    <div class="social_network">Мы в соцсетях</div>
+                    <a href="{{ url_for('index') }}">
+                        <img class="vk" src="static/img/podval/vk.png" alt="vk">
+                    </a>
+                    <a href="{{ url_for('index') }}">
+                        <img class="tg" src="static/img/podval/tg.png" alt="tg">
+                    </a>
+                    <a href="{{ url_for('index') }}">
+                        <img class="yt" src="static/img/podval/yt.png" alt="yt">
+                    </a>
+                </div>
+                <div class="d3">
+                    <div class="png2">
+                        <img class="mail" src="static/img/podval/mail.png" alt="">
+                    </div>
+                    <div class="item3 name_mail">
+                        <div>prof-m@yandex.ru</div>
+                    </div>
+                    <div class="png3">
+                        <img class="metka" src="static/img/podval/metka.png" alt="">
+                    </div>
+                    <div class="item3 street">г. Краснодар, <br>
+                        ул. Тополинная, 30/1
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="footer_content">
+                    <a href="{{ url_for('index') }}">
+                        <div class="logo_down">
+                            <img src="static/img/Avatar.png" alt="" class="logo">
+                        </div>
+                    </a>
+                    <div class="footer_text">© 2024 Профмонтаж, Все права защищены</div>
+                </div>
+            </div>
+            <div class="footer2">
+                <div class="footer_navigation">
+                    <a><span class="navigation">Навигация по сайту</span></a>
+                    <a href="{{ url_for('index') }}">
+                        <div class="a1">Главная <br></div>
+                    </a>
+                    <a href="{{ url_for('price') }}">
+                        <div class="a2">Цены<br></div>
+                    </a>
+                    <a href="{{ url_for('our_work') }}">
+                        <div class="a3">Наши работы<br></div>
+                    </a>
+                    <a href="{{ url_for('contact') }}">
+                        <div class="a4">Контакты</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="right-div"></div>
+</body>
+</html>

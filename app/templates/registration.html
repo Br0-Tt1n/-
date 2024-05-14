@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="static/style/style.css">
+    <script src="script.js"></script>
+    <title>Регистрация</title>
+
+</head>
+<body>
+    <form id="registration_form" method="POST" action="{{ url_for('registration') }}">
+    <div id="reg_str">
+        <div id="decimation"><p>РЕГИСТРАЦИЯ</p></div>
+        <div id="name">
+            <div id="dv1">Имя</div>
+            <div><input id="in1_reg" required><label for="in1_reg">Имя</label></div>
+            <div><input id="in2_reg" required><label for="in2_reg">Фамилия</label></div>
+        </div>
+        <div id="email_g">
+            <div id="dv1">Email</div>
+            <div id="dv2"><input id="reg_email" required></div>
+        </div>
+        <div id="password_g">
+            <div id="dv1">Пароль</div>
+            <div id="dv2"><input id="reg_password" required></div>
+        </div>
+        <div id="phone">
+            <div id="dv1">Телефон</div>
+            <div ><input id="country_code"  placeholder="+7" readonly><label for="country_code">Код</label></div>
+            <div>
+                <input id="us_number" name="us_number" oninput="checkInputLength()" required>
+                    <label for="us_number">
+                        Номер телефона
+                    </label>
+            </div>
+<!--            <p id="errorText">Недействительные данные</p>-->
+        </div>
+        <div id="subjecti">
+            <div id="dv1">Выберите роль</div>
+            <div id="dv2">
+                <select id="in7">
+                    <option>Клиент</option>
+                    <option>Администратор</option>
+                    <option>Рабочий</option>
+                </select>
+            </div>
+        </div>
+        <div id="d3">Вы принимаете <a href="static/files/Пользовательское соглашение.pdf" target="_blank">условия пользования</a>?<br>
+            <input id="in8" name="customer" type="checkbox" required>Да
+        </div>
+        <div id="d4">Вы робот?<br>
+            <input id="in8" name="customer" type="checkbox" required>Нет
+            <div>
+                <button id="button_regist" type="submit">Зарегестрироваться</button>
+            </div>
+        </div>
+    </div>
+    </form>
+
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/style/style.css">
+    <title>Вход</title>
+
+</head>
+<body>
+    <div id="login_window">
+        <div id="decimation"><p>Вход</p></div>
+        <div id="email_g">
+            <div id="dv1">Email</div>
+            <div id="dv2"><input id="login_email" required></div>
+        </div>
+        <div id="password_g">
+            <div id="dv1">Пароль</div>
+            <div id="dv2"><input id="login_password" required></div>
+        </div>
+        <div id="you_bot">Вы робот?<br>
+            <input id="login_check_bot" name="customer" type="checkbox">Нет
+        </div>
+            <div><button id="login_button" type="submit">Войти</button></div>
+        <div class="text_under_the_button">Вы не зарегестрированны?
+            <a href="{{ url_for('registration') }}">
+                Зарегестрируйтесь
+            </a>
+
+        </div>
+    </div>
+
+</body>
+</html>

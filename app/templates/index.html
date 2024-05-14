@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/style/style.css">
+    <title>Главная</title>
+</head>
+<body>
+    <div class="left-div"></div>
+    <div class="container">
+
+        <div class="main_menu">
+            <a href="{{ url_for('index') }}">
+                <div class="el_menu">
+                    <div id="img1"><img id= "i1" src="static/img/Home.png"></div>
+                    <div class="menu_p"><span class="animated-text">Главная</span></div>
+                </div>
+            </a>
+
+            <a href="{{ url_for('price') }}">
+                <div class="el_menu">
+                    <img id= "i2" src="static/img/Money.png">
+                    <div class="menu_p"><span class="animated-text">Цены</span></div>
+                </div>
+            </a>
+
+            <a href="{{ url_for('our_work') }}">
+                <div class="el_menu">
+                    <img id= "i3" src="static/img/Work.png">
+                    <div class="menu_p"><span class="animated-text">Наши работы</span></div>
+                </div>
+            </a>
+
+            <a href="{{ url_for('contact') }}">
+                <div class="el_menu">
+                    <img id= "i4" src="static/img/Phone.png">
+                    <div class="menu_p"><span class="animated-text">Контакты</span></div>
+                </div>
+            </a>
+        </div>
+
+        <div id = "shapka">
+            <a href="{{ url_for('index') }}">
+                <img id="avatar" src="static/img/Avatar.png" alt="Логотип">
+            </a>
+            <a href="{{ url_for('index') }}">
+                <div id="text_shapki">ПрофМонтаж</div>
+            </a>
+
+            <a href="{{ url_for('login') }}">
+                <div id="login_on_website">
+                    <img id="log" src="static/img/login.png" alt="Логин">
+                    <div id="text_log">Войти</div>
+                </div>
+            </a>
+        </div>
+
+        <div>
+            <div id="banner"></div>
+        </div>
+
+        <div class="Okna">Оконные камеры</div>
+        <div class="general_div">
+            <div class="rexay_blitz">
+                <img id="r1" src="static/img/ramki/Blitz.png">
+                <div id="t1">Толщина профиля: 60мм<br>
+                Кол-во камер: 3 <br>
+                Толщина армирования: 3 <br> 
+                Краткое описание: классич. <br>
+                дизайн, тепло, тихо</div>
+                <div class="n1">Pexay Blitz</div>
+            </div>
+            <div class="rexay_intelio">
+                <img id="r1" src="static/img/ramki/intelio.png">
+                <div id="t1">Толщина профиля: 86мм <br>
+                    Кол-во камер: 6 <br>
+                    Толщина армирования: 3 <br>
+                    Краткое описание: усил. <br>
+                    звукоизоляция, очень тепло</div>
+                <div class="n1">Pexay Intelio</div>
+            </div>
+            <div class="rexay_delight">
+                <img id="r1" src="static/img/ramki/deligth.png">
+                <div id="t1">Толщина профиля: 70мм <br>
+                    Кол-во камер: 5 <br>
+                    Толщина армирования: 3 <br>
+                    Краткое описание: узкая <br>
+                    рама, больше света и тепла</div>
+                <div class="n1">Pexay Delight</div>
+            </div>
+            <div class="rexay_constanta">
+                <img id="r1" src="static/img/ramki/constanta.png">
+                <div id="t1">Толщина профиля: 60мм <br>
+                    Кол-во камер: 4 <br>
+                    Толщина армирования: 3 <br>
+                    Краткое описание: подходит для эксплотации в любой климатической зоне
+                    </div>
+                <div class="n1">Pexay Constanta</div>
+            </div>
+            <div class="rexay_grazio">
+                <img id="r1" src="static/img/ramki/grazio.png">
+                <div id="t1">Толщина профиля: 70мм <br>
+                    Кол-во камер: 5 <br>
+                    Толщина армирования: 3 <br>
+                    Краткое описание: подходит для эксплуатаци в любой климатической зоне</div>
+                <div class="n1">Pexay Grazio</div>
+            </div>
+            <div class="krauss">
+                <img id="r1" src="static/img/ramki/Krauss.png">
+                <div id="t1">Толщина профиля: 58; 70мм <br>
+                    Кол-во камер: 3; 5 <br>
+                    Толщина армирования: 2 <br>
+                    Краткое описание: высокая теплоизоляция, устойчив к перепадам температур</div>
+                <div class="n1">Krauss 58,70</div>
+            </div>
+        </div>
+        <div class="Profile_okna">Профиль окна</div>
+        <div class="general_div_profile_okna">
+            <div class="t3">Мы работаем с производителем окон <br>
+                Rexay & Krauss
+            </div>
+            <div class="d1">
+                <div class="smile">
+                    👂
+                </div>
+                <div class="item text">
+                    <span class="bold">Шумоподавляющие свойтва</span><br>
+                    стеклопакета обеспечивают тишину в городе
+                </div>
+                <div class="smile">
+                    💡 
+                </div>
+                <div class="item text">
+                    Вы сможете выбрать <span class="bold">теплое или<br>
+                    холодное</span> освещение из окна
+                </div>
+                <div class="smile">
+                    💨 
+                </div>
+                <div class="item text">
+                    <span class="bold">Зимой теплый воздух сохраняется</span><br>
+                    в помешении  очень долго
+                </div>
+            </div>
+            <img class="r2" src="static/img/index_pict/ProfileOkna.png">
+        </div>
+        <div class="types_of_windows">Виды оконных проемов</div>
+        <div class="Example_window">
+            <div class="w1">
+                <img src="static/img/index_pict/Okno1.png">
+                <div>Одностворчатое окно <br>
+                    <span>От 2900 ₽</span> 
+                </div>
+            </div>
+            <div class="w1">
+                <img src="static/img/index_pict/Okno2.png">
+                <div>Двухстворчатое окно <br>
+                    <span>От 3600 ₽</span>
+                </div>
+            </div>
+            <div class="w1">
+                <img src="static/img/index_pict/Okno3.png">
+                <div>Трехстворчатое окно <br>
+                    <span>От 5900 ₽</span> 
+                </div>
+            </div>
+            <div class="w1">
+                <img src="static/img/index_pict/Okno4.png">
+                <div>Балконный блок <br>
+                    <span>От 7350 ₽</span> 
+                </div>
+            </div>
+        </div>
+        <div class="text_our_work">Наши работы</div>
+        <div class="our_work">
+
+            <div class="pict_wokr">
+                <a href="{{ url_for('work_okna') }}">
+                    <img src="static/img/index_pict/Okna.png">
+                </a>
+                    <div class="overlay">Окна</div>
+                    <div class="strelochka">></div>
+            </div>
+
+            <div class="pict_wokr">
+                <a href="{{ url_for('work_balkon') }}">
+                    <img src="static/img/index_pict/Balcon.png">
+                </a>
+                    <div class="overlay">Балконы</div>
+                    <div class="strelochka">></div>
+
+            </div>
+
+            <div class="pict_wokr">
+                <a href="{{ url_for('work_BesedkiPeregorodki') }}">
+                    <img src="static/img/index_pict/Besedki.png">
+                </a>
+                    <div class="overlay">Беседки</div>
+                    <div class="strelochka">></div>
+
+            </div>
+
+            <div class="pict_wokr">
+                <a href="{{ url_for('work_dveri') }}">
+                    <img src="static/img/index_pict/Doors.png">
+                </a>
+                    <div class="overlay">Двери</div>
+                    <div class="strelochka">></div>
+
+            </div>
+
+            <div class="pict_wokr">
+                <a href="{{ url_for('work_doma') }}">
+                    <img src="static/img/index_pict/Doma.png">
+                </a>
+                    <div class="overlay">Дома</div>
+                    <div class="strelochka">></div>
+
+            </div>
+
+            <div class="pict_wokr">
+                <a href="{{ url_for('work_proizvodstvo') }}">
+                    <img src="static/img/index_pict/Proizvodstvo.png">
+                </a>
+                    <div class="overlay">Производство</div>
+                    <div class="strelochka">></div>
+
+            </div>
+        </div>
+
+
+        <div class="down">
+            <div class="d2">
+                <div class="png">
+                    <img class="phone" src="static/img/podval/phone.png" alt="Номер телефона">
+                </div>
+                <div class="item2">
+                    <div>8-928-208-0808</div>
+                </div>
+                <div class="png">
+                    <img class="internet" src="static/img/podval/internet.png" alt="">
+                </div>
+                <div class="item2">
+                    <div>Сайт prof-m.ru</div>
+                </div>
+                <div>
+                    <div class="social_network">Мы в соцсетях</div>
+                    <a href="{{ url_for('index') }}">
+                        <img class="vk" src="static/img/podval/vk.png" alt="vk">
+                    </a>
+                    <a href="{{ url_for('index') }}">
+                        <img class="tg" src="static/img/podval/tg.png" alt="tg">
+                    </a>
+                    <a href="{{ url_for('index') }}">
+                        <img class="yt" src="static/img/podval/yt.png" alt="yt">
+                    </a>
+                </div>
+                <div class="d3">
+                    <div class="png2">
+                        <img class="mail" src="static/img/podval/mail.png" alt="">
+                    </div>
+                    <div class="item3 name_mail">
+                        <div>prof-m@yandex.ru</div>
+                    </div>
+                    <div class="png3">
+                        <img class="metka" src="static/img/podval/metka.png" alt="">
+                    </div>
+                    <div class="item3 street">г. Краснодар, <br>
+                        ул. Тополинная, 30/1
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="footer_content">
+                    <a href="{{ url_for('index') }}">
+                        <div class="logo_down">
+                            <img src="static/img/Avatar.png" alt="" class="logo">
+                        </div>
+                    </a>
+                    <div class="footer_text">© 2024 Профмонтаж, Все права защищены</div>
+                </div>
+            </div>
+            <div class="footer2">
+                <div class="footer_navigation">
+                    <a><span class="navigation">Навигация по сайту</span></a>
+                    <a href="{{ url_for('index') }}">
+                        <div class="a1">Главная <br></div>
+                    </a>
+                    <a href="{{ url_for('price') }}">
+                        <div class="a2">Цены<br></div>
+                    </a>
+                    <a href="{{ url_for('our_work') }}">
+                        <div class="a3">Наши работы<br></div>
+                    </a>
+                    <a href="{{ url_for('contact') }}">
+                        <div class="a4">Контакты</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="right-div"></div>
+</body>
+</html>
