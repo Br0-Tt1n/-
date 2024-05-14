@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/style/style.css">
+    <link rel="icon" href="static/img/favicon.ico" type="image/x-icon">
+    <title>Панель андминистратора</title>
+</head>
+<body>
+    <div class="left-div"></div>
+    <div class="container">
+        <div id="shapka">
+            <a href="{{ url_for('index') }}">
+                <img id="avatar" src="static/img/Avatar.png" alt="Логотип">
+            </a>
+            <a href="{{ url_for('index') }}">
+                <div id="text_shapki">ПрофМонтаж</div>
+            </a>
+
+            <a href="{{ url_for('profile') }}">
+                <div id="login_on_website">
+                    <img id="log" src="static/img/login.png" alt="Логин">
+                    <div id="text_log">Профиль</div>
+                </div>
+            </a>
+        </div>
+
+        <div class="data">
+            <div class="text_data">
+                <div class="item_ad">Общие данные</div>
+                <div class="item_ad">Серия и номер <br>паспорта</div>
+                <div class="item_ad">Адрес</div>
+                <div class="item_ad">Номер</div>
+                <div class="item_ad">День рождения</div>
+            </div>
+            <div class="user">
+                <div class="text_user">
+                    <img src="static/img/AdminPanel/AvatarUser.png" alt="Аватар Пользователя" class="photo_u">
+                    <div class="nameAndEmail">
+                        <div class="name_u">Васнецов Александр Сергеевич</div>
+                        <div class="email_u">ilonmaks@gmail.ru</div>
+                    </div>
+                    <div class="passport_u">1256567431</div>
+                    <div class="addres_u">Улица Ленина <br>
+                        дом 35
+                    </div>
+                    <div class="number_u">88005553535</div>
+                    <div class="dayBirthday_u">23.04.1999</div>
+                    <img src="static/img/AdminPanel/Delete.png" alt="Удалить" class="delete">
+                    <img src="static/img/AdminPanel/EditData.png" alt="Редактировать" class="edit_data">
+                </div>
+            </div>
+            <div class="pages">
+                <div class="previous">Предыдущая</div>
+                <div class="number_page">Страница 1 из 10</div>
+                <div class="next">Следующая</div>
+            </div>
+            <div class="info_order">
+                <div class="text_info_order">
+                    <div class="product_number">Номер товара</div>
+                    <div class="product_name">Название</div>
+                    <div class="product_category">Категория</div>
+                    <div class="product_quantity">Количество</div>
+                    <div class="product_delivery_date">Дата доставки</div>
+                    <div class="product_price">Цена</div>
+                    <div class="product_edit">Edit</div>
+                </div>
+                <div class="text_info_product">
+                    <div class="number_prod">#A001</div>
+                    <div class="name_prod">Pexay Blitz</div>
+                    <div class="category_prod">Оконные камеры</div>
+                    <div class="quantity_prod">3</div>
+                    <div class="delivery_prod">23/07/2024</div>
+                    <div class="price_prod">18,655₽</div>
+                    <div class="karandash">
+                        <img src="static/img/AdminPanel/EditProduct.png" alt="Редактировать заказ" class="edit_prod">
+                    </div>
+                </div>
+                <div class="text_info_product empty-row">
+                    <div class="number_prod">&nbsp;</div>
+                    <div class="name_prod">&nbsp;</div>
+                    <div class="category_prod">&nbsp;</div>
+                    <div class="quantity_prod">&nbsp;</div>
+                    <div class="delivery_prod">&nbsp;</div>
+                    <div class="price_prod">&nbsp;</div>
+                    <div class="edit_prod">&nbsp;</div>
+                </div>
+                <div class="text_info_product empty-row">
+                    <div class="number_prod">&nbsp;</div>
+                    <div class="name_prod">&nbsp;</div>
+                    <div class="category_prod">&nbsp;</div>
+                    <div class="quantity_prod">&nbsp;</div>
+                    <div class="delivery_prod">&nbsp;</div>
+                    <div class="price_prod">&nbsp;</div>
+                    <div class="edit_prod">&nbsp;</div>
+                </div>
+                <div class="pages1">
+                    <div class="previous1">Предыдущая</div>
+                    <div class="number_page1">1⠀⠀⠀2</div>
+                    <div class="next1">Следующая</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="right-div"></div>
+
+</body>
+</html>

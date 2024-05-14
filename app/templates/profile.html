@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Двери</title>
-    <link rel="stylesheet" href="../static/style/style.css">
+    <link rel="stylesheet" href="static/style/style.css">
     <link rel="icon" href="static/img/favicon.ico" type="image/x-icon">
+    <title>Профиль</title>
 </head>
 <body>
     <div class="left-div"></div>
     <div class="container">
+
         <div class="main_menu">
             <a href="{{ url_for('index') }}">
                 <div class="el_menu">
@@ -77,82 +78,23 @@
             <a href="{{ url_for('index') }}">
                 <div id="text_shapki">ПрофМонтаж</div>
             </a>
-
-            {% if login_user==False %}
-                <a href="{{ url_for('login') }}">
-                    <div id="login_on_website">
-                        <img id="log" src="static/img/login.png" alt="Логин">
-                        <div id="text_log">Войти</div>
-                    </div>
-                </a>
-            {% else %}
-                <a href="{{ url_for('profile') }}">
-                    <div id="login_on_website">
-                        <img id="log" src="static/img/login.png" alt="Логин">
-                        <div id="text_log">Профиль</div>
-                    </div>
-                </a>
-            {% endif %}
         </div>
 
-        <div class="selection_menu">
-
-            <a href="{{ url_for('work_okna') }}">
-                <div class="line_item">Окна</div>
-            </a>
-
-            <a href="{{ url_for('work_dveri') }}">
-                <div class="line_item">Двери</div>
-            </a>
-
-            <a href="{{ url_for('work_balkon') }}">
-                <div class="line_item">Балконы</div>
-            </a>
-
-            <a href="{{ url_for('work_BesedkiPeregorodki') }}">
-                <div class="line_item">Беседки | Перегородки</div>
-            </a>
-
-            <a href="{{ url_for('work_doma') }}">
-                <div class="line_item">Частные дома</div>
-            </a>
-
-            <a href="{{ url_for('work_proizvodstvo') }}">
-                <div class="line_item">Производство</div>
-            </a>
-        </div>
-
-        <div class="our_work">
-            <div class="pict_wokr">
-                <img src="static/img/OurWork/Dveri/Dveri1.png" alt="Пример работы" class="o1">
-            </div>
-            <div class="pict_wokr">
-                <img src="static/img/OurWork/Dveri/Dveri2.png" alt="Пример работы">
-            </div>
-            <div class="pict_wokr">
-                <img src="static/img/OurWork/Dveri/Dveri3.png" alt="Пример работы">
-            </div>
-            <div class="pict_wokr">
-                <img src="static/img/OurWork/Dveri/Dveri4.png" alt="Пример работы">
-            </div>
-            <div class="pict_wokr">
-                <img src="static/img/OurWork/Dveri/Dveri5.png" alt="Пример работы">
-            </div>
-            <div class="pict_wokr">
-                <img src="static/img/OurWork/Dveri/Dveri6.png" alt="Пример работы">
-            </div>
-            <div class="pict_wokr">
-                <img src="static/img/OurWork/Dveri/Dveri7.png" alt="Пример работы">
-            </div>
-            <div class="pict_wokr">
-                <img src="static/img/OurWork/Dveri/Dveri8.png" alt="Пример работы">
-            </div>
-            <div class="pict_wokr">
-                <img src="static/img/OurWork/Dveri/Dveri9.png" alt="Пример работы">
+            <div class="user_profile">
+            <img src="static/img/Profile/Photo.png" alt="Аватар Пользователя" class="photo">
+            <div class="data_user">
+                <div class="name_user">Васнецов Александр Сергеевич</div>
+                <div class="happyDay_user" >25.04.1999</div>
+                <div class="edit_profile">Редактировать профиль</div>
+                <img src="static/img/Profile/Pen.png" alt="Ручка" class="pen">
+                <div class="passport_user">Серия и номер паспорта: 1256567431</div>
+                <div class="email_user">Почта: ilonmaks@gmail.ru</div>
+                <div class="street_user">Адрес: Улица Ленина дом 35</div>
+                <div class="number_user">Номер телефона: 88005553535</div>
             </div>
         </div>
 
-        <div class="down">
+    <div class="down">
             <div class="d2">
                 <div class="png">
                     <img class="phone" src="static/img/podval/phone.png" alt="Номер телефона">
@@ -227,7 +169,10 @@
                 </div>
             </div>
         </div>
+
     </div>
+
     <div class="right-div"></div>
+
 </body>
 </html>

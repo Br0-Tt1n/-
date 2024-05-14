@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Прайс</title>
+    <link rel="stylesheet" href="static/style/style.css">
+    <link rel="icon" href="static/img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="left-div"></div>
+    <div class="container">
+        <div class="main_menu">
+            <a href="{{ url_for('index') }}">
+                <div class="el_menu">
+                    <div id="img1"><img id= "i1" src="static/img/Home.png"></div>
+                    <div class="menu_p"><span class="animated-text">Главная</span></div>
+                </div>
+            </a>
+
+            <a href="{{ url_for('price') }}">
+                <div class="el_menu">
+                    <img id= "i2" src="static/img/Money.png">
+                    <div class="menu_p"><span class="animated-text">Цены</span></div>
+                </div>
+            </a>
+
+            <a href="{{ url_for('our_work') }}">
+                <div class="el_menu">
+                    <img id= "i3" src="static/img/Work.png">
+                    <div class="menu_p"><span class="animated-text">Наши работы</span></div>
+                </div>
+            </a>
+
+            <a href="{{ url_for('contact') }}">
+                <div class="el_menu">
+                    <img id= "i4" src="static/img/Phone.png">
+                    <div class="menu_p"><span class="animated-text">Контакты</span></div>
+                </div>
+            </a>
+
+            {% if login_user %}
+                <a href="{{ url_for('order') }}">
+                    <div class="el_menu">
+                        <img id="i5" src="static/img/buy.png">
+                        <div class="menu_p"><span class="animated-text">Корзина</span></div>
+                    </div>
+                </a>
+            {% else %}
+            {% endif %}
+
+            {% if admin_rule %}
+                <a href="{{ url_for('admin') }}">
+                    <div class="el_menu">
+                        <img id="i6" src="static/img/admin.png">
+                        <div class="menu_p"><span class="animated-text">Для админа</span></div>
+                    </div>
+                </a>
+            {% else %}
+            {% endif %}
+
+            {% if login_user %}
+                <a href="{{ url_for('logout') }}">
+                    <div class="el_menu">
+                        <img id="i7" src="static/img/exit.png">
+                        <div class="menu_p"><span class="animated-text">Выйти</span></div>
+                    </div>
+                </a>
+            {% else %}
+            {% endif %}
+        </div>
+
+        <div id="shapka">
+            <a href="{{ url_for('index') }}">
+                <img id="avatar" src="static/img/Avatar.png" alt="Логотип">
+            </a>
+            <a href="{{ url_for('index') }}">
+                <div id="text_shapki">ПрофМонтаж</div>
+            </a>
+
+            {% if login_user==False %}
+                <a href="{{ url_for('login') }}">
+                    <div id="login_on_website">
+                        <img id="log" src="static/img/login.png" alt="Логин">
+                        <div id="text_log">Войти</div>
+                    </div>
+                </a>
+            {% else %}
+                <a href="{{ url_for('profile') }}">
+                    <div id="login_on_website">
+                        <img id="log" src="static/img/login.png" alt="Логин">
+                        <div id="text_log">Профиль</div>
+                    </div>
+                </a>
+            {% endif %}
+        </div>
+
+        <div class="price_content">
+            <table>
+                <tr>
+                    <th>№</th>
+                    <th>Наименование услуг</th>
+                    <th>Стоимость (руб)</th>
+                    <th>Единица измерения</th>
+                </tr>
+                <tr> <td></td> <td>Выезд специалиста</td> <td>300/бесплатно(при заказе от 500р)</td> <td>Город</td> </tr>
+                <tr> <td></td> <td>Выезд специалиста за город</td> <td>10</td> <td>км</td> </tr>
+                <tr> <td></td> <td>Регулировка окна/двери ключем</td> <td>100</td ><td>окно/дв.</td> </tr>
+                <tr> <td></td> <td>Регулировка окна/двери (сложн.ремонт с расштаплива-м)</td> <td>700</td> <td>окно/дв.</td> </tr>
+                <tr> <td></td> <td>Регулировка двери входной группы</td> <td>1200</td> <td>шт.</td> </tr>
+                <tr> <td></td> <td>Чистка и смазка фурнитуры без разборки изделия</td> <td>150</td> <td>окно/дв.</td> </tr>
+                <tr> <td></td> <td>Чистка и смазка фурнитуры с последующей разборкой/сборкой</td> <td>750</td> <td>окно/дв.</td> </tr>
+                <tr> <td></td> <td>Смазка уплотнителей</td> <td>250</td> <td>окно/дв.</td> </tr>
+                <tr> <td></td> <td>Замазка герметиком стык откос рама (Silicon), (Cosmofen)</td> <td>100</td> <td>м/п</td> </tr>
+                <tr> <td></td> <td>Герметизация монтажных швов Пена/(СтизА)</td> <td>400</td> <td>м/п</td> </tr>
+                <tr> <td></td> <td>Замена уплотнентельной резины</td> <td>800/1000</td> <td>окно/дверь</td> </tr>
+                <tr> <td></td> <td>Установка наружных откосов 60мм</td> <td>400</td> <td>м/п</td> </tr>
+                <tr> <td></td> <td>Установка наружных откосов 100мм</td> <td>600</td> <td>м/п</td> </tr>
+                <tr> <td></td> <td>Установка декоративных накладок на петли</td> <td>150</td> <td>комплект</td> </tr>
+                <tr> <td></td> <td>Заглушка клапана Аэресо</td> <td>300</td> <td>шт.</td> </tr>
+                <tr> <td></td> <td>Врезка вентиляционных решеток</td> <td>400</td> <td>шт.</td> </tr>
+                <tr> <td></td> <td>Отделка наружных откосов окна из белой оцинковки</td> <td>1000</td> <td>м/п</td> </tr>
+                <tr> <td></td> <td>Отделка внутренних откосов окна(становая панель)</td> <td>2600</td> <td>м2</td> </tr>
+                <tr> <td></td> <td>Отделка внутренних откосов окна(СЕНДВИЧ)</td> <td>3000</td> <td>м2</td> </tr>
+                <tr> <td></td> <td>Установка уголка на откосы</td> <td>200</td> <td>м/п</td> </tr>
+                <tr> <td></td> <td>Антимоскитные сетки(Обычные) м2</td> <td>600</td> <td>м2</td> </tr>
+                <tr> <td></td> <td>Антимоскитные сетки(Раздвижные) м2</td> <td>1500</td> <td>м2</td> </tr>
+                <tr> <td></td> <td>Антимоскитная сетка на дверь(распашная)</td> <td>1800</td> <td>м2</td> </tr>
+                <tr> <td></td> <td>Монтаж антимоскитной сетки</td> <td>300</td> <td>шт.</td> </tr>
+                <tr> <td></td> <td>Кронштейны к антимоскитной сетки</td> <td>100</td> <td>комплект</td> </tr>
+                <tr> <td></td> <td>Замена/установка водоотливов(оцинкованные)</td> <td>1060</td> <td>м2</td> </tr>
+                <tr> <td></td> <td>Замена/установка водоотливов(БЕЛЫЕ)</td> <td>1280</td> <td>м2</td> </tr>
+                <tr> <td></td> <td>Установка подоконников:</td> <td></td> <td></td> </tr>
+                <tr> <td></td> <td>600мм</td> <td>1200</td> <td>м/п</td> </tr>
+                <tr> <td></td> <td>400мм</td> <td>950</td> <td>м/п</td> </tr>
+                <tr> <td></td> <td>200мм</td> <td>700</td> <td>м/п</td> </tr>
+                <tr> <td></td> <td>Установка подоконника / порога верзалит</td> <td>5000</td> <td>м/п</td> </tr>
+                <tr> <td></td> <td>Замена стеклопакета однокамерный</td> <td>3000</td> <td>м2</td> </tr>
+                <tr> <td></td> <td>Замена стеклопакета двухкамерный</td> <td>3500</td> <td>м2</td> </tr>
+                <tr> <td></td> <td>Замена стекла 4мм</td> <td>2000</td> <td>м2</td> </tr>
+                <tr> <td></td> <td>Тонирование стекла пленкой(бронирование) на объекте</td> <td>800</td> <td>м2</td> </tr>
+                <tr> <td></td> <td>Замена фурнитуры: створка</td> <td>3500</td> <td>окно 1300*1400</td> </tr>
+                <tr> <td></td> <td>Замена фурнитуры: балконная дверь</td> <td>5000</td> <td>дверь</td> </tr>
+                <tr> <td></td> <td>Установка створки в глухое окно</td> <td>5500</td> <td>шт.</td> </tr>
+                <tr> <td></td> <td>Замена оконой/балконной ручки</td> <td>250</td> <td>шт.</td> </tr>
+                <tr> <td></td> <td>Замена офисной ручки на входную группу (скоба ал.)</td> <td>2300</td> <td>шт.</td> </tr>
+                <tr> <td></td> <td>Замена фиксатора(защелки) на АЛ.раздвижную систему</td> <td>500</td> <td>шт.</td> </tr>
+                <tr> <td></td> <td>Установка балконной защелки</td> <td>550</td> <td>шт.</td> </tr>
+                <tr> <td></td> <td>Замена нажимного гарнитура</td> <td>1800</td> <td>шт.</td> </tr>
+                <tr> <td></td> <td>Замена элемента фурнитуры(петли)</td> <td>1200</td> <td>шт.</td> </tr>
+                <tr> <td></td> <td>Установка гребенки проветр. элемент фурнитуры (алюм.)</td> <td>550</td> <td>шт.</td> </tr>
+                <tr> <td></td> <td>Установка гребенки проветр.(пласт.)</td> <td>300</td> <td>шт.</td> </tr>
+                <tr> <td></td> <td>Установка клапана вентиляции air-box</td> <td>1000</td> <td>окно/дв.</td> </tr>
+                <tr> <td></td> <td>Установка ручки с ключем для защиты открывания ребенком</td> <td>750</td> <td>шт.</td> </tr>
+                <tr> <td></td> <td>Переделка открывания пластиковых окон из поворотного в повотк.</td> <td>3500</td> <td>шт.</td> </tr>
+                <tr> <td></td> <td>Установка дверного доводчика</td> <td>3000</td> <td>шт.</td> </tr>
+                <tr> <td></td> <td>Регулировка дверного доводчика</td> <td>250</td> <td>шт.</td> </tr>
+                <tr> <td></td> <td>Ремонт роллет</td> <td>1800</td> <td>шт.</td> </tr>
+                <tr> <td></td> <td>Установка роллет</td> <td>850</td> <td>м2</td> </tr>
+                <tr> <td></td> <td>Подключение электрической роллеты</td> <td>1200</td> <td>шт.</td> </tr>
+                <tr> <td></td> <td>Монтаж готового изделия (окна) кирпичный дом (без откосов)</td> <td>900</td> <td>м2</td> </tr>
+                <tr> <td></td> <td>Монтаж готового изделия (окна) панельный дом (без откосов)</td> <td>750</td> <td>м2</td> </tr>
+                <tr> <td></td> <td>Монтаж алюм. конструкций</td> <td>900</td> <td>м2</td> </tr>
+                <tr> <td></td> <td>Демонтаж решетки</td> <td>600</td> <td>шт.</td> </tr>
+                <tr> <td></td> <td>Демонтаж старого изделия</td> <td>150</td> <td>м2</td> </tr>
+                <tr> <td></td> <td>Замена замка</td> <td>1600</td> <td>шт.</td> </tr>
+                <tr> <td></td> <td>Замена цилиндра замка</td> <td>1000</td> <td>шт.</td> </tr>
+                <tr> <td></td> <td>Замена многозапорного замка на ПВХ дверь</td> <td>2900</td> <td>комплект</td> </tr>
+                <tr> <td></td> <td>Замена шпингалетов дверных</td> <td>1500</td> <td>комплект</td> </tr>
+                <tr> <td></td> <td>Замена петель дверных АЛ. Белых</td> <td>1200</td> <td>шт.</td> </tr>
+            </table>
+        </div>
+
+        <div class="down">
+            <div class="d2">
+                <div class="png">
+                    <img class="phone" src="static/img/podval/phone.png" alt="Номер телефона">
+                </div>
+                <div class="item2">
+                    <div>8-928-208-0808</div>
+                </div>
+                <div class="png">
+                    <img class="internet" src="static/img/podval/internet.png" alt="">
+                </div>
+                <div class="item2">
+                    <a href="{{ url_for('index') }}">
+                        <div>Сайт prof-m.ru</div>
+                    </a>
+                </div>
+                <div>
+                    <div class="social_network">Мы в соцсетях</div>
+                    <a href="{{ url_for('index') }}">
+                        <img class="vk" src="static/img/podval/vk.png" alt="vk">
+                    </a>
+                    <a href="{{ url_for('index') }}">
+                        <img class="tg" src="static/img/podval/tg.png" alt="tg">
+                    </a>
+                    <a href="{{ url_for('index') }}">
+                        <img class="yt" src="static/img/podval/yt.png" alt="yt">
+                    </a>
+                </div>
+                <div class="d3">
+                    <div class="png2">
+                        <img class="mail" src="static/img/podval/mail.png" alt="">
+                    </div>
+                    <div class="item3 name_mail">
+                        <a href="https://360.yandex.ru/mail/">
+                            <div>prof-m@yandex.ru</div>
+                        </a>
+                    </div>
+                    <div class="png3">
+                        <img class="metka" src="static/img/podval/metka.png" alt="">
+                    </div>
+                    <a href="{{ url_for('contact') }}">
+                        <div class="item3 street">г. Краснодар, <br>
+                            ул. Тополинная, 30/1
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="footer_content">
+                    <a href="{{ url_for('index') }}">
+                        <div class="logo_down">
+                            <img src="static/img/Avatar.png" alt="" class="logo">
+                        </div>
+                    </a>
+                    <div class="footer_text">© 2024 Профмонтаж, Все права защищены</div>
+                </div>
+            </div>
+            <div class="footer2">
+                <div class="footer_navigation">
+                    <a><span class="navigation">Навигация по сайту</span></a>
+                    <a href="{{ url_for('index') }}">
+                        <div class="a1">Главная <br></div>
+                    </a>
+                    <a href="{{ url_for('price') }}">
+                        <div class="a2">Цены<br></div>
+                    </a>
+                    <a href="{{ url_for('our_work') }}">
+                        <div class="a3">Наши работы<br></div>
+                    </a>
+                    <a href="{{ url_for('contact') }}">
+                        <div class="a4">Контакты</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="right-div"></div>
+</body>
+</html>

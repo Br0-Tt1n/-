@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Двери</title>
-    <link rel="stylesheet" href="../static/style/style.css">
+    <link rel="stylesheet" href="static/style/style.css">
     <link rel="icon" href="static/img/favicon.ico" type="image/x-icon">
+    <title>оформление заказа</title>
 </head>
 <body>
     <div class="left-div"></div>
     <div class="container">
+
         <div class="main_menu">
             <a href="{{ url_for('index') }}">
                 <div class="el_menu">
@@ -68,9 +69,10 @@
                 </a>
             {% else %}
             {% endif %}
+
         </div>
 
-        <div id = "shapka">
+        <div id="shapka">
             <a href="{{ url_for('index') }}">
                 <img id="avatar" src="static/img/Avatar.png" alt="Логотип">
             </a>
@@ -93,63 +95,44 @@
                     </div>
                 </a>
             {% endif %}
+
         </div>
 
-        <div class="selection_menu">
-
-            <a href="{{ url_for('work_okna') }}">
-                <div class="line_item">Окна</div>
-            </a>
-
-            <a href="{{ url_for('work_dveri') }}">
-                <div class="line_item">Двери</div>
-            </a>
-
-            <a href="{{ url_for('work_balkon') }}">
-                <div class="line_item">Балконы</div>
-            </a>
-
-            <a href="{{ url_for('work_BesedkiPeregorodki') }}">
-                <div class="line_item">Беседки | Перегородки</div>
-            </a>
-
-            <a href="{{ url_for('work_doma') }}">
-                <div class="line_item">Частные дома</div>
-            </a>
-
-            <a href="{{ url_for('work_proizvodstvo') }}">
-                <div class="line_item">Производство</div>
+        <div class="text-oformlenie">Оформление заказа</div>
+        <div class="full-general">
+            <div class="general-div-oformlenie">
+            <div><input class="input_buy" placeholder="Фамилия"></div>
+            <div><input class="input_buy" placeholder="Имя"></div>
+            <div><input class="input_buy" placeholder="Адрес"></div>
+            <div><input class="input_buy" placeholder="Номер телефона"></div>
+            <div id="d2">
+                <select name="оконные_камеры">
+                    <option>Оконные камеры</option>
+                    <option>Рехау Blitz</option>
+                    <option>Рехау Intelio</option>
+                    <option>Рехау Deligth</option>
+                    <option>Рехау Constatnta</option>
+                    <option>Рехау Grazio</option>
+                    <option>Krauss 58,70</option>
+                </select>
+                <select name="проемы">
+                    <option>Проемы</option>
+                    <option>Одностворчатое окно</option>
+                    <option>Двухстворчатое окно</option>
+                    <option>Трехстворчатое окно</option>
+                    <option>Балконный Блок</option>
+                </select>
+            </div>
+        </div>
+        <div class="predoplata">
+            <div class="text1">Ваш заказ</div>
+            <div class="text2">Товары(1)</div>
+            <div class="text3">Итого</div>
+            <div class="text4">18 655₽</div>
+            <a href="{{ url_for('buy') }}">
+                <div class="text5">Предоплата заказа</div>
             </a>
         </div>
-
-        <div class="our_work">
-            <div class="pict_wokr">
-                <img src="static/img/OurWork/Dveri/Dveri1.png" alt="Пример работы" class="o1">
-            </div>
-            <div class="pict_wokr">
-                <img src="static/img/OurWork/Dveri/Dveri2.png" alt="Пример работы">
-            </div>
-            <div class="pict_wokr">
-                <img src="static/img/OurWork/Dveri/Dveri3.png" alt="Пример работы">
-            </div>
-            <div class="pict_wokr">
-                <img src="static/img/OurWork/Dveri/Dveri4.png" alt="Пример работы">
-            </div>
-            <div class="pict_wokr">
-                <img src="static/img/OurWork/Dveri/Dveri5.png" alt="Пример работы">
-            </div>
-            <div class="pict_wokr">
-                <img src="static/img/OurWork/Dveri/Dveri6.png" alt="Пример работы">
-            </div>
-            <div class="pict_wokr">
-                <img src="static/img/OurWork/Dveri/Dveri7.png" alt="Пример работы">
-            </div>
-            <div class="pict_wokr">
-                <img src="static/img/OurWork/Dveri/Dveri8.png" alt="Пример работы">
-            </div>
-            <div class="pict_wokr">
-                <img src="static/img/OurWork/Dveri/Dveri9.png" alt="Пример работы">
-            </div>
         </div>
 
         <div class="down">
@@ -227,7 +210,11 @@
                 </div>
             </div>
         </div>
+
     </div>
+
     <div class="right-div"></div>
+
+
 </body>
 </html>

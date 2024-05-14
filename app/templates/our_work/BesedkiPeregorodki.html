@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Беседки | Перегородки</title>
     <link rel="stylesheet" href="../static/style/style.css">
-    <script src="static/script/script.js"></script>
+    <link rel="icon" href="static/img/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <div class="left-div"></div>
@@ -38,6 +38,36 @@
                     <div class="menu_p"><span class="animated-text">Контакты</span></div>
                 </div>
             </a>
+
+            {% if login_user %}
+                <a href="{{ url_for('order') }}">
+                    <div class="el_menu">
+                        <img id="i5" src="static/img/buy.png">
+                        <div class="menu_p"><span class="animated-text">Корзина</span></div>
+                    </div>
+                </a>
+            {% else %}
+            {% endif %}
+
+            {% if admin_rule %}
+                <a href="{{ url_for('admin') }}">
+                    <div class="el_menu">
+                        <img id="i6" src="static/img/admin.png">
+                        <div class="menu_p"><span class="animated-text">Для админа</span></div>
+                    </div>
+                </a>
+            {% else %}
+            {% endif %}
+
+            {% if login_user %}
+                <a href="{{ url_for('logout') }}">
+                    <div class="el_menu">
+                        <img id="i7" src="static/img/exit.png">
+                        <div class="menu_p"><span class="animated-text">Выйти</span></div>
+                    </div>
+                </a>
+            {% else %}
+            {% endif %}
         </div>
 
         <div id = "shapka">
@@ -48,12 +78,21 @@
                 <div id="text_shapki">ПрофМонтаж</div>
             </a>
 
-            <a href="{{ url_for('login') }}">
-                <div id="login_on_website">
-                    <img id="log" src="static/img/login.png" alt="Логин">
-                    <div id="text_log">Войти</div>
-                </div>
-            </a>
+            {% if login_user==False %}
+                <a href="{{ url_for('login') }}">
+                    <div id="login_on_website">
+                        <img id="log" src="static/img/login.png" alt="Логин">
+                        <div id="text_log">Войти</div>
+                    </div>
+                </a>
+            {% else %}
+                <a href="{{ url_for('profile') }}">
+                    <div id="login_on_website">
+                        <img id="log" src="static/img/login.png" alt="Логин">
+                        <div id="text_log">Профиль</div>
+                    </div>
+                </a>
+            {% endif %}
         </div>
 
         <div class="selection_menu">
@@ -76,6 +115,10 @@
 
             <a href="{{ url_for('work_doma') }}">
                 <div class="line_item">Частные дома</div>
+            </a>
+
+            <a href="{{ url_for('work_proizvodstvo') }}">
+                <div class="line_item">Производство</div>
             </a>
         </div>
 
@@ -121,7 +164,9 @@
                     <img class="internet" src="static/img/podval/internet.png" alt="">
                 </div>
                 <div class="item2">
-                    <div>Сайт prof-m.ru</div>
+                    <a href="{{ url_for('index') }}">
+                        <div>Сайт prof-m.ru</div>
+                    </a>
                 </div>
                 <div>
                     <div class="social_network">Мы в соцсетях</div>
@@ -140,14 +185,18 @@
                         <img class="mail" src="static/img/podval/mail.png" alt="">
                     </div>
                     <div class="item3 name_mail">
-                        <div>prof-m@yandex.ru</div>
+                        <a href="https://360.yandex.ru/mail/">
+                            <div>prof-m@yandex.ru</div>
+                        </a>
                     </div>
                     <div class="png3">
                         <img class="metka" src="static/img/podval/metka.png" alt="">
                     </div>
-                    <div class="item3 street">г. Краснодар, <br>
-                        ул. Тополинная, 30/1
-                    </div>
+                    <a href="{{ url_for('contact') }}">
+                        <div class="item3 street">г. Краснодар, <br>
+                            ул. Тополинная, 30/1
+                        </div>
+                    </a>
                 </div>
             </div>
             <div class="footer">
